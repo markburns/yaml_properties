@@ -3,7 +3,7 @@
 If you find yourself often setting app config in yaml files for different
 environments etc. Then this can be quite useful to simply access those variables.
 
-
+## Examples
 ```ruby
 YamlProperties.redis_port
 ```
@@ -23,7 +23,7 @@ end
 
 ```
 
-#Override filename like this
+##Override filename like this
 
 ```ruby
 module Shutl
@@ -34,6 +34,9 @@ module Shutl
 end
 ```
 #Yadayada
+
+```ruby
 gem 'yaml_config'
+```
 
 Usual gem/bundler usage/contribution guidelines
