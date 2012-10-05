@@ -1,5 +1,5 @@
 require File.expand_path('spec/spec_helper')
-require './lib/yaml_config'
+require './lib/yaml_properties'
 
 describe YamlProperties do
   context "in general" do

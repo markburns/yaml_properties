@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'yaml_config/version'
+require 'yaml_properties/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "yaml_config"
+  gem.name          = "yaml_properties"
   gem.version       = YamlProperties::VERSION
   gem.authors       = ["Mark Burns"]
   gem.email         = ["markthedeveloper@gmail.com"]
