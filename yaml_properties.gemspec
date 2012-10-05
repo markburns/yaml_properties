@@ -5,14 +5,14 @@ require 'yaml_config/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "yaml_config"
-  gem.version       = YamlConfig::VERSION
+  gem.version       = YamlProperties::VERSION
   gem.authors       = ["Mark Burns"]
   gem.email         = ["markthedeveloper@gmail.com"]
   gem.description   = %q{Easily add configurable variables for app config using YAML files}
   gem.summary       = <<-DESCRIPTION.gsub(/^\s{4}/, '')
     Example:
 
-      YamlConfig.life_the_universe_and_everything
+      YamlProperties.life_the_universe_and_everything
       #=> 42
 
     In config/properties.yml

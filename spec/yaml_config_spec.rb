@@ -1,7 +1,7 @@
 require File.expand_path('spec/spec_helper')
 require './lib/yaml_config'
 
-describe YamlConfig do
+describe YamlProperties do
   context "in general" do
     before do
       File.stub(:open)
@@ -20,27 +20,27 @@ describe YamlConfig do
     end
 
     specify do
-      YamlConfig.properties.should == properties
+      YamlProperties.properties.should == properties
     end
     specify do
-      YamlConfig.life_the_universe_and_everything.should == 42
-    end
-
-    specify do
-      YamlConfig.some_string_value.should == "something"
+      YamlProperties.life_the_universe_and_everything.should == 42
     end
 
     specify do
-      YamlConfig.send("a boolean").should == true
+      YamlProperties.some_string_value.should == "something"
     end
 
     specify do
-      YamlConfig.parent.should == {"child" => "Egg"}
+      YamlProperties.send("a boolean").should == true
+    end
+
+    specify do
+      YamlProperties.parent.should == {"child" => "Egg"}
     end
 
     context "extending a module" do
       module Acme
-        extend YamlConfig
+        extend YamlProperties
       end
 
       specify do
@@ -51,7 +51,7 @@ describe YamlConfig do
 
   context "overriding yaml_file default" do
     module Mystery
-      extend YamlConfig
+      extend YamlProperties
 
       def self.yaml_file
         "./spec/test.yml"

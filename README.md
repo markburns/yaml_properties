@@ -1,11 +1,11 @@
-# YamlConfig
+# YamlProperties
 
 If you find yourself often setting app config in yaml files for different
 environments etc. Then this can be quite useful to simply access those variables.
 
 
 ```ruby
-YamlConfig.redis_port
+YamlProperties.redis_port
 ```
 
 Will by default read a value from a YAML file in `config/properties.yml`
@@ -18,7 +18,7 @@ Also can be added to a module or class like
 
 ```ruby
 module Shutl
-  extend YamlConfig
+  extend YamlProperties
 end
 
 ```
@@ -27,7 +27,7 @@ end
 
 ```ruby
 module Shutl
-  extend YamlConfig
+  extend YamlProperties
   def self.yaml_file
     ENV['SINATRA_ENV'] == 'development' ? 'config/properties.yml' : 'config/properties_production.yml'
   end
