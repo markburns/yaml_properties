@@ -23,8 +23,7 @@ module YamlConfig
   end
 
   def load_properties
-    f = File.open(yaml_file)
-    YAML.load f
+    YAML.load File.open(yaml_file)
   end
 
   extend self
