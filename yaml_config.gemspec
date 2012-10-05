@@ -8,9 +8,23 @@ Gem::Specification.new do |gem|
   gem.version       = YamlConfig::VERSION
   gem.authors       = ["Mark Burns"]
   gem.email         = ["markthedeveloper@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Easily add configurable variables for app config using YAML files}
+  gem.summary       = <<-DESCRIPTION.gsub(/^\s{4}/, '')
+    Example:
+
+      YamlConfig.life_the_universe_and_everything
+      #=> 42
+
+    In config/properties.yml
+
+      life_the_universe_and_everything: 42
+  DESCRIPTION
+
   gem.homepage      = ""
+
+  gem.add_dependency  'active_support'
+  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'debugger'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
