@@ -1,29 +1,39 @@
 # YamlConfig
 
-TODO: Write a gem description
+If you find yourself often setting app config in yaml files for different
+environments etc. Then this can be quite useful to simply access those variables.
 
-## Installation
 
-Add this line to your application's Gemfile:
+```ruby
+YamlConfig.redis_port
+```
 
-    gem 'yaml_config'
+Will by default read a value from a YAML file in `config/properties.yml`
 
-And then execute:
+```yaml
+redis_port: 1369
+```
 
-    $ bundle
+Also can be added to a module or class like
 
-Or install it yourself as:
+```ruby
+module Shutl
+  extend YamlConfig
+end
 
-    $ gem install yaml_config
+```
 
-## Usage
+#Override filename like this
 
-TODO: Write usage instructions here
+```ruby
+module Shutl
+  extend YamlConfig
+  def self.yaml_file
+    ENV['SINATRA_ENV'] == 'development' ? 'config/properties.yml' : 'config/properties_production.yml'
+  end
+end
+```
+#Yadayada
+gem 'yaml_config'
 
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Usual gem/bundler usage/contribution guidelines
