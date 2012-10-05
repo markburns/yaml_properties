@@ -9,6 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Mark Burns"]
   gem.email         = ["markthedeveloper@gmail.com"]
   gem.description   = %q{Easily add configurable variables for app config using YAML files}
+
   gem.summary       = <<-DESCRIPTION.gsub(/^\s{4}/, '')
     Example:
 
@@ -22,7 +23,8 @@ Gem::Specification.new do |gem|
 
   gem.homepage      = ""
 
-  gem.add_dependency  'active_support'
+  gem.add_dependency  'active_support', '>= 1.0'
+
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'debugger'
 
