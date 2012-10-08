@@ -23,7 +23,7 @@ Gem::Specification.new do |gem|
 
   gem.homepage      = ""
 
-  gem.add_dependency  'active_support', '>= 1.0'
+  gem.add_dependency  'activesupport', "~> 3.2.8"
 
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'debugger'
