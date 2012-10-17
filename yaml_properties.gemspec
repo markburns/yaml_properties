@@ -9,6 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Mark Burns"]
   gem.email         = ["markthedeveloper@gmail.com"]
   gem.description   = %q{Easily add configurable variables for app config using YAML files}
+  gem.executables << 'yaml_diff'
 
   gem.summary       = <<-DESCRIPTION.gsub(/^\s{4}/, '')
     Example:
