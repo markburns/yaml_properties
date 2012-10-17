@@ -54,7 +54,7 @@ describe YamlProperties do
       extend YamlProperties
 
       def self.yaml_file
-        "./spec/test.yml"
+        "./spec/fixtures/test.yml"
       end
     end
 
