@@ -6,6 +6,10 @@ module YamlProperties
     @properties ||= load_properties.with_indifferent_access
   end
 
+  def reset!
+    reset_properties
+  end
+
   def reset_properties
     @properties = nil
   end
@@ -14,6 +18,10 @@ module YamlProperties
     return properties[key] if properties.keys.include? key.to_s
 
     super key, *args, &block
+  end
+
+  def override_attribute attribute, value
+    properties[attribute] = value
   end
 
   private

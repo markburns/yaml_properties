@@ -19,6 +19,13 @@ describe YamlProperties do
       }
     end
 
+    specify "overriding attributes (in e.g. tests)" do
+      YamlProperties.override_attribute :life_the_universe_and_everything, 13
+      YamlProperties.life_the_universe_and_everything.should == 13
+      YamlProperties.reset!
+      YamlProperties.life_the_universe_and_everything.should == 42
+    end
+
     specify do
       YamlProperties.properties.should == properties
     end
