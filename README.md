@@ -44,12 +44,12 @@ end
 
 #features/support/env.rb
 After do |scenario|
-  YamlProperties.reset!
+  Shutl.reset!
 end
 
 #features/step_definitions/egg_steps.rb
 Given /\AThere are \d+ eggs in a dozen\z/ |dozen|
-  YamlProperties.override_attribute :egg, dozen
+  Shutl.override_attribute :egg, dozen
 end
 ```
 
