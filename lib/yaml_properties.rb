@@ -1,5 +1,6 @@
 require "yaml_properties/version"
 require "active_support/core_ext/hash"
+require "yaml"
 
 module YamlProperties
   def properties
